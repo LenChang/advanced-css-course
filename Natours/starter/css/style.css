@@ -8,149 +8,155 @@ Dark green: #28b485
 */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.7;
-    columns: #777;
-    padding: 30px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  columns: #777;
+  padding: 30px;
 }
 
 .header {
-    height: 95vh;
-    position: relative;
-    background-image: linear-gradient(
-        to right bottom,
-        #78d368d0,
-        #55c57ad0),url(../img/bowbow-1.jpg);
-    background-size: cover;
-    color:royalblue;
-    background-position: bottom;
-
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  height: 95vh;
+  position: relative;
+  background-image: linear-gradient(to right bottom, #78d368d0, #55c57ad0), url(../img/photo-garage2.jpg);
+  background-size: cover;
+  color: royalblue;
+  background-position: bottom;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
-
-.logo-box{
-    position: absolute;
-    top:40px;
-    left: 40px;
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
 }
-
-.logo{
-    height: 35px;
+.logo {
+  height: 35px;
 }
-
-.text-box{
-    position:absolute;
-    top:40%;
-    left:50%;
-    /* background-color: red */
-    transform: translate(-50%,-50%);
-    text-align: center
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  /* background-color: red */
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
-
-.heading-primary{
-    color: white;
-    text-transform: uppercase;
-    /* It's used to fix the shaking, but i don't have the issue */
-    /* backface-visibility: hidden; */
-    margin-bottom: 60px
+.heading-primary {
+  color: white;
+  text-transform: uppercase; /* It's used to fix the shaking, but i don't have the issue */
+  /* backface-visibility: hidden; */
+  margin-bottom: 60px;
 }
-
-.heading-primary-main{
-    display: block;
-    font-size: 60px;
-    font-weight: 700;
-    letter-spacing: 35px;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-
-    /*-- Another paramter --
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 35px;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  /* -- Another paramter --
     animation-delay: 2s;
-    animation-iteration-count: 2;
-    */
+    animation-iteration-count: 2; */
 }
-
-.heading-primary-sub{
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 4px;
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
 }
-
-@keyframes moveInLeft{
-    0%{
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    70%{
-        opacity: 0.8;
-        transform: translateX(15px);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(0px);
-    }
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  70% {
+    opacity: 0.8;
+    transform: translateX(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
 }
-
-@keyframes moveInRight{
-    0%{
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    70%{
-        opacity: 0.8;
-        transform: translateX(-15px);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(0px);
-    }
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  70% {
+    opacity: 0.8;
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
 }
 
 .btn:link,
-.btn:visited{
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 15px 40px;
-    display: inline-block;
-    border-radius: 100px;
-    transition: all 0.2s;
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: relative;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-white {
+  background-color: #fff;
+  color: gray;
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn-white:after {
+  background-color: white;
 }
 
-.btn:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
 
-.btn:active{
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
-}
-
-.btn-white{
-    background-color: #fff;
-    color:gray;
-}
-
-.btn::after{
-    content: "";
-    display: inline-block;
-    height:100%;
-    width:100%;
-    border-radius:100px;
-}
-
-.btn-white:after{
-    background-color: white;
+.btn-animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
 }
